@@ -7,6 +7,9 @@ import Home from '../pages/Home';
 import CountUp, { useCountUp } from 'react-countup';
 import AnimatedNumber from 'react-animated-number';
 import EKH from '../assets/pp.jpg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faGithub,  faLinkedin, faWhatsappSquare, faTelegramPlane } from "@fortawesome/free-brands-svg-icons";
+import {  faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 
 
    function Body() {
@@ -21,16 +24,24 @@ import EKH from '../assets/pp.jpg';
                 <Navbar fixed="top" style={{ backgroundColor: "white" }} collapseOnSelect expand='md'>
                     <Container>
                         <Navbar.Brand href='/'>
-                       EUGENE KHUSTOCHKA
+                       Evgenii Khustochka
                     </Navbar.Brand>
                         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                         <Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
                             <Nav className='mr-auto'>
                                 <Nav.Link href='/'>Home</Nav.Link>
-                                <Nav.Link href='#projects'>Projects</Nav.Link>
-                                <Nav.Link href='#contacts'>Contacts</Nav.Link>
+                                <Nav.Link href='#projects'>Projects</Nav.Link>                                
                             </Nav>
                         </Navbar.Collapse>
+                        <Navbar.Collapse className="justify-content-end">
+                    <Nav.Link>Contact me</Nav.Link>        
+                    
+                    <Navbar.Brand href="mailto:ekhustochka@gmail.com"><FontAwesomeIcon icon={faEnvelopeSquare} /></Navbar.Brand>
+                    <Navbar.Brand href="https://wa.me/77052874724?text=Здравствуйте!" target='_blank'><FontAwesomeIcon icon={faWhatsappSquare} /></Navbar.Brand>
+                    <Navbar.Brand href="https://t.me/evgeniikhustochka" target='_blank'><FontAwesomeIcon icon={faTelegramPlane} /></Navbar.Brand>
+                    <Navbar.Brand href="https://www.linkedin.com/in/evgeniikh/" target='_blank'><FontAwesomeIcon icon={faLinkedin} /></Navbar.Brand>
+                   {/* <Navbar.Brand href="https://github.com/Eugene2110" target='_blank'><FontAwesomeIcon icon={faGithub} /></Navbar.Brand> */}                                    
+                    </Navbar.Collapse>
                     </Container>
                 </Navbar>
 
